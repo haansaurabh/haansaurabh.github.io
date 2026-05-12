@@ -1,614 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Saurabh | Data Analyst Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Saurabh | Data Analyst Portfolio</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-  <style>
+<style>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins', sans-serif;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
 
-    body{
-      background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
-      color:white;
-      min-height:100vh;
-      overflow-x:hidden;
-    }
+body{
+  background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+  color:white;
+  min-height:100vh;
+}
 
-    /* Animated Background */
-    body::before{
-      content:'';
-      position:fixed;
-      width:600px;
-      height:600px;
-      background:#2563eb;
-      filter:blur(180px);
-      opacity:0.25;
-      top:-200px;
-      left:-150px;
-      z-index:-1;
-    }
+/* glowing background */
+body::before{
+  content:'';
+  position:fixed;
+  width:600px;
+  height:600px;
+  background:#2563eb;
+  filter:blur(180px);
+  opacity:0.25;
+  top:-200px;
+  left:-150px;
+  z-index:-1;
+}
 
-    body::after{
-      content:'';
-      position:fixed;
-      width:500px;
-      height:500px;
-      background:#06b6d4;
-      filter:blur(180px);
-      opacity:0.20;
-      bottom:-200px;
-      right:-100px;
-      z-index:-1;
-    }
+body::after{
+  content:'';
+  position:fixed;
+  width:500px;
+  height:500px;
+  background:#06b6d4;
+  filter:blur(180px);
+  opacity:0.20;
+  bottom:-200px;
+  right:-100px;
+  z-index:-1;
+}
 
-    .container{
-      width:95%;
-      max-width:1400px;
-      margin:auto;
-      padding:40px 20px;
-    }
+.container{
+  width:95%;
+  max-width:1400px;
+  margin:auto;
+  padding:40px 20px;
+}
 
-    .dashboard{
-      display:grid;
-      grid-template-columns:330px 1fr;
-      gap:30px;
-    }
+/* DASHBOARD LAYOUT */
+.dashboard{
+  display:grid;
+  grid-template-columns:330px 1fr;
+  gap:30px;
+  align-items:start;
+}
 
-    /* Sidebar */
+/* STATIC LEFT PANEL */
+.sidebar{
+  position:sticky;
+  top:20px;
 
-    .sidebar{
-      background:rgba(255,255,255,0.08);
-      backdrop-filter:blur(18px);
-      border:1px solid rgba(255,255,255,0.1);
-      border-radius:30px;
-      padding:35px;
-      text-align:center;
-      box-shadow:0 8px 30px rgba(0,0,0,0.3);
-    }
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:30px;
+  padding:35px;
+  text-align:center;
+  box-shadow:0 8px 30px rgba(0,0,0,0.3);
+}
 
-    .profile-img{
-      width:150px;
-      height:150px;
-      border-radius:50%;
-      object-fit:cover;
-      border:5px solid #38bdf8;
-      margin-bottom:20px;
-      box-shadow:0 0 25px rgba(56,189,248,0.5);
-    }
+.profile-img{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid #38bdf8;
+  margin-bottom:20px;
+  box-shadow:0 0 25px rgba(56,189,248,0.5);
+}
 
-    .sidebar h1{
-      font-size:32px;
-      margin-bottom:8px;
-    }
+.sidebar h1{
+  font-size:32px;
+}
 
-    .role{
-      color:#93c5fd;
-      font-size:16px;
-      margin-bottom:25px;
-    }
+.role{
+  color:#93c5fd;
+  margin-bottom:25px;
+}
 
-    .info{
-      text-align:left;
-      margin-top:25px;
-    }
+.info{
+  text-align:left;
+  margin-top:20px;
+}
 
-    .info p{
-      margin:14px 0;
-      color:#e5e7eb;
-      line-height:1.6;
-      font-size:15px;
-    }
+.info p{
+  margin:14px 0;
+  color:#e5e7eb;
+}
 
-    .badge{
-      display:inline-block;
-      margin-top:25px;
-      padding:10px 18px;
-      border-radius:40px;
-      background:linear-gradient(90deg,#2563eb,#06b6d4);
-      font-size:14px;
-      font-weight:600;
-    }
+.badge{
+  display:inline-block;
+  margin-top:25px;
+  padding:10px 18px;
+  border-radius:40px;
+  background:linear-gradient(90deg,#2563eb,#06b6d4);
+  font-weight:600;
+}
 
-    .social-links{
-      margin-top:30px;
-    }
+.social-links{
+  margin-top:30px;
+}
 
-    .social-links a{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:50px;
-      height:50px;
-      border-radius:50%;
-      background:rgba(255,255,255,0.1);
-      color:white;
-      text-decoration:none;
-      font-size:20px;
-      margin:0 8px;
-      transition:0.4s;
-    }
+.social-links a{
+  width:50px;
+  height:50px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:rgba(255,255,255,0.1);
+  color:white;
+  margin:0 8px;
+  text-decoration:none;
+  transition:0.3s;
+}
 
-    .social-links a:hover{
-      background:#0ea5e9;
-      transform:translateY(-5px);
-    }
+.social-links a:hover{
+  background:#0ea5e9;
+  transform:translateY(-5px);
+}
 
-    /* Main */
+/* RIGHT SIDE */
+.main{
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+}
 
-    .main{
-      display:flex;
-      flex-direction:column;
-      gap:30px;
-    }
+/* CARDS */
+.card{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:30px;
+  padding:35px;
+  transition:0.3s;
+}
 
-    .card{
-      background:rgba(255,255,255,0.08);
-      backdrop-filter:blur(18px);
-      border:1px solid rgba(255,255,255,0.1);
-      border-radius:30px;
-      padding:35px;
-      box-shadow:0 8px 30px rgba(0,0,0,0.25);
-      transition:0.4s;
-    }
+.card:hover{
+  transform:translateY(-5px);
+}
 
-    .card:hover{
-      transform:translateY(-5px);
-    }
+.card h2{
+  color:#38bdf8;
+  margin-bottom:20px;
+}
 
-    .card h2{
-      margin-bottom:22px;
-      font-size:26px;
-      color:#38bdf8;
-    }
+/* HERO */
+.hero h1{
+  font-size:42px;
+}
 
-    .card p{
-      color:#e5e7eb;
-      line-height:1.9;
-      font-size:15px;
-    }
+.hero span{
+  color:#38bdf8;
+}
 
-    /* Hero */
+.hero p{
+  color:#cbd5e1;
+  margin-top:10px;
+  line-height:1.8;
+}
 
-    .hero{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      flex-wrap:wrap;
-      gap:20px;
-    }
+.hero a{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  background:linear-gradient(90deg,#2563eb,#06b6d4);
+  border-radius:50px;
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+}
 
-    .hero-text h1{
-      font-size:48px;
-      margin-bottom:10px;
-    }
+/* TIMELINE */
+.timeline{
+  border-left:3px solid #38bdf8;
+  padding-left:25px;
+}
 
-    .hero-text span{
-      color:#38bdf8;
-    }
+.timeline-item{
+  margin-bottom:30px;
+  position:relative;
+}
 
-    .hero-text p{
-      max-width:700px;
-      color:#cbd5e1;
-      line-height:1.8;
-    }
+.timeline-item::before{
+  content:'';
+  position:absolute;
+  left:-34px;
+  top:5px;
+  width:14px;
+  height:14px;
+  background:#38bdf8;
+  border-radius:50%;
+  box-shadow:0 0 10px #38bdf8;
+}
 
-    .hero-btn{
-      margin-top:25px;
-    }
+.timeline-item span{
+  display:inline-block;
+  background:rgba(56,189,248,0.15);
+  color:#38bdf8;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:13px;
+  margin-bottom:8px;
+}
 
-    .hero-btn a{
-      text-decoration:none;
-      padding:14px 28px;
-      background:linear-gradient(90deg,#2563eb,#06b6d4);
-      color:white;
-      border-radius:50px;
-      font-weight:600;
-      transition:0.4s;
-      display:inline-block;
-    }
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
 
-    .hero-btn a:hover{
-      transform:scale(1.05);
-      box-shadow:0 0 20px rgba(56,189,248,0.5);
-    }
+.skill-box{
+  background:rgba(255,255,255,0.06);
+  padding:20px;
+  border-radius:20px;
+}
 
-    /* Stats */
+.progress{
+  height:10px;
+  background:#334155;
+  border-radius:10px;
+  overflow:hidden;
+  margin-top:10px;
+}
 
-    .stats{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:20px;
-    }
+.progress span{
+  display:block;
+  height:100%;
+  background:linear-gradient(90deg,#2563eb,#06b6d4);
+}
 
-    .stat-box{
-      background:rgba(255,255,255,0.06);
-      border-radius:20px;
-      padding:25px;
-      text-align:center;
-      transition:0.4s;
-    }
+/* RESPONSIVE */
+@media(max-width:950px){
+  .dashboard{
+    grid-template-columns:1fr;
+  }
 
-    .stat-box:hover{
-      background:rgba(37,99,235,0.2);
-      transform:translateY(-5px);
-    }
+  .sidebar{
+    position:relative;
+  }
 
-    .stat-box h3{
-      font-size:34px;
-      color:#38bdf8;
-      margin-bottom:10px;
-    }
+  .hero h1{
+    font-size:32px;
+  }
+}
 
-    .stat-box p{
-      color:#cbd5e1;
-    }
-
-    /* Skills */
-
-    .skills-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-    }
-
-    .skill-card{
-      background:rgba(255,255,255,0.06);
-      border-radius:20px;
-      padding:20px;
-      transition:0.4s;
-    }
-
-    .skill-card:hover{
-      background:rgba(14,165,233,0.15);
-      transform:translateY(-5px);
-    }
-
-    .skill-card h4{
-      margin-bottom:15px;
-      color:#38bdf8;
-    }
-
-    .progress{
-      width:100%;
-      height:10px;
-      background:#334155;
-      border-radius:10px;
-      overflow:hidden;
-    }
-
-    .progress span{
-      display:block;
-      height:100%;
-      background:linear-gradient(90deg,#2563eb,#06b6d4);
-      border-radius:10px;
-    }
-
-    /* Timeline */
-
-    .timeline{
-      border-left:3px solid #38bdf8;
-      padding-left:25px;
-    }
-
-    .timeline-item{
-      margin-bottom:30px;
-      position:relative;
-    }
-
-    .timeline-item::before{
-      content:'';
-      position:absolute;
-      left:-34px;
-      top:5px;
-      width:16px;
-      height:16px;
-      border-radius:50%;
-      background:#38bdf8;
-      box-shadow:0 0 10px #38bdf8;
-    }
-
-    .timeline-item h4{
-      font-size:20px;
-      margin-bottom:6px;
-    }
-
-    .timeline-item p{
-      color:#cbd5e1;
-    }
-
-    /* Responsive */
-
-    @media(max-width:950px){
-
-      .dashboard{
-        grid-template-columns:1fr;
-      }
-
-      .hero-text h1{
-        font-size:38px;
-      }
-    }
-
-  </style>
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-  <div class="dashboard">
+<div class="dashboard">
 
-    <!-- Sidebar -->
+<!-- LEFT SIDEBAR (STATIC) -->
+<aside class="sidebar">
 
-    <aside class="sidebar">
+<img class="profile-img"
+src="https://via.placeholder.com/200" />
 
-      <img src="https://via.placeholder.com/200"
-      alt="Profile"
-      class="profile-img">
+<h1>Saurabh</h1>
 
-      <h1>Saurabh</h1>
+<p class="role">Junior Analyst - Data @ HCLTech</p>
 
-      <p class="role">
-        Junior Analyst - Data @ HCLTech
-      </p>
+<div class="info">
+<p><strong>B.Sc CS:</strong> IIMT University (2019–2022)</p>
+<p><strong>MCA:</strong> JAIN University (2024–2026)</p>
+<p><strong>Experience:</strong> HCLTech (Oct 2022–Present)</p>
+<p><strong>Goal:</strong> AI & Data Science Engineer</p>
+</div>
 
-      <div class="info">
+<div class="badge">Data • AI • Analytics</div>
 
-        <p>
-          <strong>🎓 B.Sc CS:</strong><br>
-          IIMT University, Meerut
-        </p>
+<div class="social-links">
+<a href="https://www.linkedin.com/in/haansaurabh/" target="_blank">
+<i class="fab fa-linkedin-in"></i>
+</a>
+</div>
 
-        <p>
-          <strong>🎓 MCA:</strong><br>
-          JAIN University, Bengaluru
-        </p>
+</aside>
 
-        <p>
-          <strong>💼 Experience:</strong><br>
-          Working at HCLTech since October 2022
-        </p>
+<!-- RIGHT SIDE (DYNAMIC) -->
+<main class="main">
 
-        <p>
-          <strong>🚀 Career Goal:</strong><br>
-          Transition into AI & Data Science domain
-        </p>
+<!-- HERO -->
+<section class="card hero">
 
-      </div>
+<h1>Hello, I'm <span>Saurabh</span></h1>
 
-      <div class="badge">
-        AI & Data Science Enthusiast
-      </div>
+<p>
+I am a Data Analyst at HCLTech with strong interest in Artificial Intelligence,
+Machine Learning, and Data Science. I aim to transition into advanced AI-driven
+roles and build impactful data solutions.
+</p>
 
-      <div class="social-links">
+<a href="https://www.linkedin.com/in/haansaurabh/" target="_blank">
+Visit LinkedIn Profile
+</a>
 
-        <a href="https://www.linkedin.com/in/haansaurabh/"
-        target="_blank">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
+</section>
 
-      </div>
+<!-- TIMELINE -->
+<section class="card">
 
-    </aside>
+<h2>Education & Career Timeline</h2>
 
-    <!-- Main -->
+<div class="timeline">
 
-    <main class="main">
+<div class="timeline-item">
+<span>2019 - 2022</span>
+<h3>B.Sc Computer Science</h3>
+<p>IIMT University, Meerut</p>
+</div>
 
-      <!-- Hero -->
+<div class="timeline-item">
+<span>Oct 2022 - Present</span>
+<h3>Junior Analyst - Data</h3>
+<p>HCLTech</p>
+</div>
 
-      <section class="card hero">
+<div class="timeline-item">
+<span>2024 - 2026</span>
+<h3>MCA</h3>
+<p>JAIN University, Bengaluru</p>
+</div>
 
-        <div class="hero-text">
+</div>
 
-          <h1>
-            Hello, I'm <span>Saurabh</span>
-          </h1>
+</section>
 
-          <p>
-            Passionate Data Analyst with experience at HCLTech,
-            currently pursuing MCA from JAIN University Bengaluru.
-            Enthusiastic about Artificial Intelligence, Machine Learning,
-            and Data Science with a vision to build impactful,
-            intelligent, and data-driven solutions for the future.
-          </p>
+<!-- SKILLS -->
+<section class="card">
 
-          <div class="hero-btn">
+<h2>Skills</h2>
 
-            <a href="https://www.linkedin.com/in/haansaurabh/"
-            target="_blank">
-              Visit LinkedIn Profile
-            </a>
+<div class="skills">
 
-          </div>
+<div class="skill-box">
+SQL
+<div class="progress"><span style="width:90%"></span></div>
+</div>
 
-        </div>
+<div class="skill-box">
+Python
+<div class="progress"><span style="width:85%"></span></div>
+</div>
 
-      </section>
+<div class="skill-box">
+Power BI
+<div class="progress"><span style="width:88%"></span></div>
+</div>
 
-      <!-- Stats -->
+<div class="skill-box">
+Excel
+<div class="progress"><span style="width:92%"></span></div>
+</div>
 
-      <section class="stats">
+<div class="skill-box">
+Machine Learning
+<div class="progress"><span style="width:70%"></span></div>
+</div>
 
-        <div class="stat-box">
-          <h3>3+</h3>
-          <p>Years Experience</p>
-        </div>
+<div class="skill-box">
+Data Visualization
+<div class="progress"><span style="width:80%"></span></div>
+</div>
 
-        <div class="stat-box">
-          <h3>2022</h3>
-          <p>Started at HCLTech</p>
-        </div>
+</div>
 
-        <div class="stat-box">
-          <h3>MCA</h3>
-          <p>Currently Pursuing</p>
-        </div>
+</section>
 
-        <div class="stat-box">
-          <h3>AI</h3>
-          <p>Future Career Focus</p>
-        </div>
+</main>
 
-      </section>
-
-      <!-- About -->
-
-      <section class="card">
-
-        <h2>About Me</h2>
-
-        <p>
-          I am currently working as a Junior Analyst - Data at HCLTech
-          since October 2022. My professional journey has strengthened
-          my analytical thinking, reporting skills, and understanding
-          of business data workflows.
-        </p>
-
-        <br>
-
-        <p>
-          Alongside my career, I am pursuing MCA from JAIN University,
-          Bengaluru to deepen my technical expertise and transition
-          towards advanced IT domains including Artificial Intelligence,
-          Machine Learning, and Data Science.
-        </p>
-
-        <br>
-
-        <p>
-          I enjoy learning modern technologies, solving complex
-          analytical problems, and continuously upgrading my skills
-          in data-driven technologies and intelligent systems.
-        </p>
-
-      </section>
-
-      <!-- Skills -->
-
-      <section class="card">
-
-        <h2>Technical Skills</h2>
-
-        <div class="skills-grid">
-
-          <div class="skill-card">
-            <h4>SQL & Database Management</h4>
-
-            <div class="progress">
-              <span style="width:90%"></span>
-            </div>
-          </div>
-
-          <div class="skill-card">
-            <h4>Python for Data Analysis</h4>
-
-            <div class="progress">
-              <span style="width:82%"></span>
-            </div>
-          </div>
-
-          <div class="skill-card">
-            <h4>Power BI & Dashboarding</h4>
-
-            <div class="progress">
-              <span style="width:88%"></span>
-            </div>
-          </div>
-
-          <div class="skill-card">
-            <h4>Excel & Reporting</h4>
-
-            <div class="progress">
-              <span style="width:92%"></span>
-            </div>
-          </div>
-
-          <div class="skill-card">
-            <h4>Data Visualization</h4>
-
-            <div class="progress">
-              <span style="width:84%"></span>
-            </div>
-          </div>
-
-          <div class="skill-card">
-            <h4>Machine Learning</h4>
-
-            <div class="progress">
-              <span style="width:68%"></span>
-            </div>
-          </div>
-
-          <div class="skill-card">
-            <h4>Artificial Intelligence</h4>
-
-            <div class="progress">
-              <span style="width:65%"></span>
-            </div>
-          </div>
-
-          <div class="skill-card">
-            <h4>Statistics & Data Insights</h4>
-
-            <div class="progress">
-              <span style="width:80%"></span>
-            </div>
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- Timeline -->
-
-      <section class="card">
-
-        <h2>Career & Education Timeline</h2>
-
-        <div class="timeline">
-
-          <div class="timeline-item">
-            <h4>B.Sc Computer Science</h4>
-            <p>IIMT University, Meerut</p>
-          </div>
-
-          <div class="timeline-item">
-            <h4>Junior Analyst - Data</h4>
-            <p>HCLTech • October 2022 - Present</p>
-          </div>
-
-          <div class="timeline-item">
-            <h4>Master of Computer Applications (MCA)</h4>
-            <p>JAIN University, Bengaluru</p>
-          </div>
-
-          <div class="timeline-item">
-            <h4>Future Goal</h4>
-            <p>AI Engineer / Data Scientist</p>
-          </div>
-
-        </div>
-
-      </section>
-
-    </main>
-
-  </div>
+</div>
 
 </div>
 
